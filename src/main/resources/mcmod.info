@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tides",
+  "name": "Tides",
+  "description": "A watery mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["joshie", "Yulife"],
+  "credits": "The Devil",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

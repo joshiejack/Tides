@@ -1,0 +1,59 @@
+// For those who want the bleeding edge
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+repositories {
+  maven {
+    url "http://dvs1.progwml6.com/files/maven"
+  }
+}
+
+ext.buildnumber=""
+if (System.getenv().BUILD_NUMBER) {
+    ext.buildnumber="-" + System.getenv().BUILD_NUMBER
+}
+
+version = "${minecraft_version}-${mod_version}${buildnumber}"
+group= "penguins.tides"
+archivesBaseName = "Tides"
+
+minecraft {
+    version = "${minecraft_version}-${forge_version}"
+    runDir = "run"
+    mappings = "${mappings_version}"
+    
+    replace "@VERSION@", "${mod_version}"
+    replaceIn "TidesInfo.java"
+}
+
+dependencies {
+  deobfCompile "mezz.jei:jei_${minecraft_version}:${jei_version}"
+}
+
+processResources
+{
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
