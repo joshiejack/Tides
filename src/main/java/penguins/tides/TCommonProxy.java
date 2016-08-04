@@ -1,3 +1,5 @@
 package penguins.tides;
 
-public class TCommonProxy {}
+public class TCommonProxy {
+    public void initClient() {}
+}

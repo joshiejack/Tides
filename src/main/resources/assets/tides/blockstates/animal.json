@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_all"
+  },
+  "variants": {
+    "animal=starfish": [
+      { "model": "tides:starfish1", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish2", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish3", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish4", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish5", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish6", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:starfish1", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish2", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish3", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish4", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish5", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish6", "textures": { "particle": "tides:models/starfish_red"}, "weight": 1 },
+      { "model": "tides:starfish1", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:starfish2", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:starfish3", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:starfish4", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:starfish5", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:starfish6", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 }
+    ]
+  }
+}
