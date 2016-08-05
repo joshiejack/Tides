@@ -15,6 +15,7 @@ public class ItemTidal extends Item {
     public Item register(String name) {
         setUnlocalizedName(name);
         setRegistryName(new ResourceLocation(MODID, name));
+        setCreativeTab(Tides.TAB); //Default out the tab
         GameRegistry.register(this);
         return this;
     }

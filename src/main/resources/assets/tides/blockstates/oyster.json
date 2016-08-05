@@ -1,0 +1,15 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_all"
+  },
+  "variants": {
+    "oyster": [
+      { "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}},
+      { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/oyster_pearl"}},
+      { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/oyster_pearl_black"}},
+      { "model": "tides:oyster_sand", "textures": { "texture": "tides:models/oyster_sand"}}
+    ]
+  }
+}

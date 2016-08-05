@@ -23,7 +23,8 @@
       { "model": "tides:starfish3", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
       { "model": "tides:starfish4", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
       { "model": "tides:starfish5", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
-      { "model": "tides:starfish6", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 }
+      { "model": "tides:starfish6", "textures": { "particle": "tides:models/starfish_yellow"}, "weight": 1 },
+      { "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}, "weight": 1 }
     ]
   }
 }
