@@ -1,2 +1,11 @@
 itemGroup.tidal=Tides
 tile.animal.starfish.name=Starfish
+item.pearl.white.name=White Pearl
+item.pearl.black.name=Black Pearl
+item.turtle.name=Spawn Turtle
+entity.tides.turtle.name=Green Sea Turtle
+tile.coral.blue.name=Blue Coral
+tile.coral.cyan.name=Cyan Coral
+tile.coral.green.name=Green Coral
+tile.coral.orange.name=Orange Coral
+tile.coral.pink.name=Pink Coral

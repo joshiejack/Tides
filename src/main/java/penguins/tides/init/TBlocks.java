@@ -3,6 +3,7 @@ package penguins.tides.init;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import penguins.tides.blocks.BlockAnimal;
+import penguins.tides.blocks.BlockCoral;
 import penguins.tides.blocks.TileOyster;
 
 import java.util.logging.Level;
@@ -20,6 +21,7 @@ public class TBlocks {
     public static void init() {
         LOGGER.log(Level.INFO, "Registering the animal block");
         animal = new BlockAnimal().register("animal");
+        coral = new BlockCoral().register("coral");
         GameRegistry.registerTileEntity(TileOyster.class, MODID + ":oyster");
     }
 }

@@ -1,7 +1,6 @@
 package penguins.tides;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,10 +9,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import penguins.tides.entities.TEntities;
+import penguins.tides.init.TEntities;
 import penguins.tides.init.TBlocks;
-import penguins.tides.items.TItems;
-import penguins.tides.world.TWorld;
+import penguins.tides.init.TItems;
+import penguins.tides.init.TWorld;
 
 import static penguins.tides.lib.TidesInfo.*;
 
