@@ -31,7 +31,7 @@ public class Tides {
     public static final CreativeTabs TAB = new CreativeTabs("tidal") {
         @Override
         public Item getTabIconItem() {
-            return Items.FISH;
+            return TItems.PEARL;
         }
     };
 
