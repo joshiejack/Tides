@@ -12,6 +12,7 @@ import penguins.tides.entities.EntityTurtle;
 import penguins.tides.entities.models.ModelSeaTurtle;
 import penguins.tides.entities.models.RenderCreature;
 import penguins.tides.init.TBlocks;
+import penguins.tides.items.TItems;
 
 import static net.minecraft.block.BlockLiquid.LEVEL;
 
@@ -26,5 +27,8 @@ public class TClientProxy extends TCommonProxy {
                 return new RenderCreature(manager, new ModelSeaTurtle(), "turtle");
             }
         });
+
+        ModelLoader.setCustomModelResourceLocation(TItems.PEARL, 0, new ModelResourceLocation(TItems.PEARL.getRegistryName(), "white"));
+        ModelLoader.setCustomModelResourceLocation(TItems.PEARL, 1, new ModelResourceLocation(TItems.PEARL.getRegistryName(), "black"));
     }
 }
