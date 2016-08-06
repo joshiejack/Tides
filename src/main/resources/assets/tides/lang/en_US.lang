@@ -1,16 +1,24 @@
+#Tab
 itemGroup.tidal=Tides
+
+#Tiles and Blocks
 tile.animal.starfish.name=Starfish
-item.pearl.white.name=White Pearl
+tile.coral.blue.name=Blossom Coral
+tile.coral.cyan.name=Sphere Coral
+tile.coral.green.name=Leaf Coral
+tile.coral.orange.name=Branch Coral
+tile.coral.red.name=Blade Coral
+tile.coral.pink.name=Bloom Coral
+tile.oyster.empty.name=Oyster
+tile.oyster.sand.name=Oyster with Sand
+tile.oyster.pearl_black.name=Oyster with Black Pearl
+tile.oyster.pearl.name=Oyster with Normal Pearl
+tile.rock.reef.name=Reef Rock
+
+#Items
+item.pearl.name=White Pearl
 item.pearl.black.name=Black Pearl
 item.turtle.name=Spawn Turtle
+
+#Entities
 entity.tides.turtle.name=Green Sea Turtle
-tile.coral.blue.name=Blue Coral
-tile.coral.cyan.name=Cyan Coral
-tile.coral.green.name=Green Coral
-tile.coral.orange.name=Orange Coral
-tile.coral.pink.name=Pink Coral
-tile.coral.red.name=Red Coral
-tile.oyster.empty.name=Oyster
-tile.oyster.sand.name=Oyster
-tile.oyster.pearl_black.name=Oyster
-tile.oyster.pearl_white.name=Oyster
