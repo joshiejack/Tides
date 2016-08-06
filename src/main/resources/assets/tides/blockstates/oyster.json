@@ -5,11 +5,38 @@
     "model": "cube_all"
   },
   "variants": {
-    "oyster": [
-      { "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}},
-      { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/oyster_pearl"}},
-      { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/oyster_pearl_black"}},
-      { "model": "tides:oyster_sand", "textures": { "texture": "tides:models/oyster_sand"}}
-    ]
+    "inventory": {
+      "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}
+    },
+    "facing": {
+      "north": { "y": 180 },
+      "east": { "y": 270 },
+      "south": { },
+      "west": { "y": 90 }
+    },
+    "oyster": {
+      "empty": {
+        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}
+      },
+      "pearl_white": {
+        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
+        "submodel": {
+          "black_pearl": { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/oyster_pearl"}}
+        }
+      },
+      "pearl_black": {
+        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
+        "submodel": {
+          "black_pearl": { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/oyster_pearl_black"}}
+        }
+      },
+      "sand": {
+        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
+        "submodel": {
+          "sand": { "model": "tides:oyster_sand", "textures": { "texture": "minecraft:blocks/sand"}}
+        }
+      }
+    }
   }
 }
+

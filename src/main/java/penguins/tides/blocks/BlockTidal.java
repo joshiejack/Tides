@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -14,15 +15,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import penguins.tides.Tides;
 
 import javax.annotation.Nullable;
-
 import java.util.List;
 
+import static net.minecraft.block.BlockLiquid.LEVEL;
 import static penguins.tides.lib.TidesInfo.MODID;
 
 public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extends Block {
@@ -45,8 +47,8 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
 
     @Override
     protected BlockStateContainer createBlockState() {
-        if(property == null) return new BlockStateContainer(this, temp);
-        return new BlockStateContainer(this, property);
+        if(property == null) return new BlockStateContainer(this, LEVEL, temp);
+        return new BlockStateContainer(this, LEVEL, property);
     }
 
     @Override
@@ -99,7 +101,7 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
         }
     }
 
-    public Block register(String name) {
+    public BlockTidal register(String name) {
         setUnlocalizedName(name);
         setRegistryName(new ResourceLocation(MODID, name));
         GameRegistry.register(this);
@@ -114,5 +116,12 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
         item.setUnlocalizedName(name);
         GameRegistry.register(item);
         return this;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void registerModels() {
+        for (E e: values) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), e.ordinal(), new ModelResourceLocation(getRegistryName(), e.getClass().getSimpleName().toLowerCase() + "=" + e.getName()));
+        }
     }
 }

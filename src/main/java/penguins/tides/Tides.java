@@ -36,8 +36,8 @@ public class Tides {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        TBlocks.init();
         TItems.init();
+        TBlocks.init();
         TEntities.init();
         TWorld.init();
         proxy.initClient();

@@ -4,7 +4,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -23,13 +22,11 @@ public class TClientProxy extends TCommonProxy {
     public void initClient() {
         ModelLoader.setCustomStateMapper(TBlocks.animal, NO_WATER);
         ModelLoader.setCustomStateMapper(TBlocks.coral, NO_WATER);
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.animal), 0, new ModelResourceLocation(TBlocks.animal.getRegistryName(), "animal=starfish"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.coral), 0, new ModelResourceLocation(TBlocks.coral.getRegistryName(), "coral=blue"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.coral), 1, new ModelResourceLocation(TBlocks.coral.getRegistryName(), "coral=cyan"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.coral), 2, new ModelResourceLocation(TBlocks.coral.getRegistryName(), "coral=green"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.coral), 3, new ModelResourceLocation(TBlocks.coral.getRegistryName(), "coral=orange"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TBlocks.coral), 4, new ModelResourceLocation(TBlocks.coral.getRegistryName(), "coral=pink"));
-
+        ModelLoader.setCustomStateMapper(TBlocks.oyster, NO_WATER);
+        TBlocks.animal.registerModels();
+        TBlocks.coral.registerModels();
+        TBlocks.oyster.registerModels();
+        TBlocks.rock.registerModels();
         RenderingRegistry.registerEntityRenderingHandler(EntityTurtle.class, new IRenderFactory<EntityTurtle>() {
             @Override
             public Render<? super EntityTurtle> createRenderFor(RenderManager manager) {
