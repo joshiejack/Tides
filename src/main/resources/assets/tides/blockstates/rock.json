@@ -5,7 +5,7 @@
     "model": "cube_all"
   },
   "variants": {
-    "type": {
+    "rock": {
       "raw": { "textures": { "all": "tides:blocks/coralrock" }}
     }
   }

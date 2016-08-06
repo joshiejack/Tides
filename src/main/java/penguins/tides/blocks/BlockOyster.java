@@ -4,6 +4,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -25,6 +26,7 @@ import penguins.tides.init.TItems;
 
 import javax.annotation.Nullable;
 
+import java.util.List;
 import java.util.Random;
 
 import static net.minecraft.block.BlockHorizontal.FACING;
@@ -54,6 +56,16 @@ public class BlockOyster extends BlockTidal<Oyster> {
     protected BlockStateContainer createBlockState() {
         if(property == null) return new BlockStateContainer(this, LEVEL, FACING, temp);
         return new BlockStateContainer(this, LEVEL, FACING, property);
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+    }
+
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return (state.getValue(FACING)).getHorizontalIndex();
     }
 
     @Override
@@ -119,6 +131,11 @@ public class BlockOyster extends BlockTidal<Oyster> {
         else if (stack.getItem() == TItems.PEARL && stack.getItemDamage() == 0) return state.withProperty(property, Oyster.PEARL_WHITE);
         else if (stack.getItem() == TItems.PEARL && stack.getItemDamage() == 1) return state.withProperty(property, Oyster.PEARL_BLACK);
         else return state;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+        list.add(new ItemStack(this, 1, 0));
     }
 
     @SideOnly(Side.CLIENT)

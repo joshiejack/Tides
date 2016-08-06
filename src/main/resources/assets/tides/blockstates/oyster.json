@@ -2,11 +2,14 @@
   "forge_marker": 1,
   "defaults": {
     "transform": "forge:default-block",
-    "model": "cube_all"
+    "model": "tides:oyster",
+    "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}
   },
   "variants": {
     "inventory": {
-      "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}
+      "model": "tides:oyster",
+      "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
+      "y": 90
     },
     "facing": {
       "north": { "y": 180 },
@@ -15,23 +18,18 @@
       "west": { "y": 90 }
     },
     "oyster": {
-      "empty": {
-        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"}
-      },
+      "empty": {},
       "pearl_white": {
-        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
         "submodel": {
           "black_pearl": { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/oyster_pearl"}}
         }
       },
       "pearl_black": {
-        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
         "submodel": {
           "black_pearl": { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/oyster_pearl_black"}}
         }
       },
       "sand": {
-        "model": "tides:oyster", "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
         "submodel": {
           "sand": { "model": "tides:oyster_sand", "textures": { "texture": "minecraft:blocks/sand"}}
         }
