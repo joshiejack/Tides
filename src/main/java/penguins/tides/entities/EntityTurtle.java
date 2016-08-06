@@ -96,17 +96,17 @@ public class EntityTurtle extends EntityAnimal {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return (this.isInWater() ? SoundEvents.ENTITY_GUARDIAN_AMBIENT : SoundEvents.ENTITY_GUARDIAN_AMBIENT_LAND);
+        return (this.isInWater() ? SoundEvents.ENTITY_RABBIT_AMBIENT : SoundEvents.ENTITY_RABBIT_AMBIENT);
     }
 
     @Override
     protected SoundEvent getHurtSound() {
-        return (this.isInWater() ? SoundEvents.ENTITY_GUARDIAN_HURT : SoundEvents.ENTITY_GUARDIAN_HURT_LAND);
+        return (this.isInWater() ? SoundEvents.ENTITY_GUARDIAN_DEATH_LAND : SoundEvents.ENTITY_GUARDIAN_DEATH_LAND);
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return  (this.isInWater() ? SoundEvents.ENTITY_GUARDIAN_DEATH : SoundEvents.ENTITY_GUARDIAN_DEATH_LAND);
+        return  (this.isInWater() ? SoundEvents.ENTITY_GUARDIAN_DEATH_LAND : SoundEvents.ENTITY_GUARDIAN_DEATH_LAND);
     }
 
     @Override
