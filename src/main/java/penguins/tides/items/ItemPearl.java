@@ -23,10 +23,15 @@ public class ItemPearl extends ItemTidal {
     @SideOnly(Side.CLIENT)
     @Override
     public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-        ItemStack itemstack = new ItemStack(Items.SPAWN_EGG, 1);
-        ItemMonsterPlacer.applyEntityIdToItemStack(itemstack, "tides.turtle");
-        list.add(itemstack);
+        list.add(getEntity("turtle"));
+        list.add(getEntity("urchin"));
         list.add(new ItemStack(this, 1, 0));
         list.add(new ItemStack(this, 1, 1));
+    }
+
+    private ItemStack getEntity(String name) {
+        ItemStack itemstack = new ItemStack(Items.SPAWN_EGG, 1);
+        ItemMonsterPlacer.applyEntityIdToItemStack(itemstack, "tides." + name);
+        return itemstack;
     }
 }

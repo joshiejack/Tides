@@ -14,6 +14,18 @@ tile.oyster.sand.name=Oyster with Sand
 tile.oyster.pearl_black.name=Oyster with Black Pearl
 tile.oyster.pearl_white.name=Oyster with Normal Pearl
 tile.rock.raw.name=Reef Rock
+tile.plants.kelp_bottom.name=Kelp
+tile.plants.kelp_middle.name=Kelp
+tile.plants.kelp_top.name=Kelp
+tile.plants.grass_1.name=Seagrass
+tile.plants.grass_2.name=Seagrass
+tile.plants.grass_3.name=Seagrass
+tile.plants.grass_4.name=Seagrass
+tile.plants.grass_double.name=Seagrass
+tile.plants.grass_double1.name=Seagrass
+tile.plants.grass_double2.name=Seagrass
+tile.plants.grass_double3.name=Seagrass
+tile.plants.grass_double4.name=Seagrass
 
 #Items
 item.pearl.white.name=White Pearl
@@ -22,3 +34,4 @@ item.turtle.name=Spawn Turtle
 
 #Entities
 entity.tides.turtle.name=Green Sea Turtle
+entity.tides.urchin.name=Sea Urchin

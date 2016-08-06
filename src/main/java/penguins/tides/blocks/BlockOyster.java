@@ -32,6 +32,7 @@ import java.util.Random;
 import static net.minecraft.block.BlockHorizontal.FACING;
 import static net.minecraft.block.BlockLiquid.LEVEL;
 import static net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY;
+import static penguins.tides.TClientProxy.NO_WATER;
 
 public class BlockOyster extends BlockTidal<Oyster> {
     private static final Item SAND = Item.getItemFromBlock(Blocks.SAND);
@@ -140,6 +141,8 @@ public class BlockOyster extends BlockTidal<Oyster> {
 
     @SideOnly(Side.CLIENT)
     public void registerModels() {
+        ModelLoader.setCustomStateMapper(this, NO_WATER);
+
         for (Oyster e: values) {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), e.ordinal(), new ModelResourceLocation(getRegistryName(), "inventory"));
         }

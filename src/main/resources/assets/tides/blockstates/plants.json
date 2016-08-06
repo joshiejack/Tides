@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cross"
+  },
+  "variants": {
+    "plant=kelp_bottom": [{ "textures": { "cross": "tides:blocks/kelp_bottom"}}],
+    "plant=kelp_middle": [{ "textures": { "cross": "tides:blocks/kelp_middle"}}],
+    "plant=kelp_top": [{ "textures": { "cross": "tides:blocks/kelp_top"}}],
+    "plant=grass_1": [{ "textures": { "cross": "tides:blocks/sea_grass1"}}],
+    "plant=grass_2": [{ "textures": { "cross": "tides:blocks/sea_grass2"}}],
+    "plant=grass_3": [{ "textures": { "cross": "tides:blocks/sea_grass3"}}],
+    "plant=grass_4": [{ "textures": { "cross": "tides:blocks/sea_grass4"}}],
+    "plant=grass_double": [{ "textures": { "cross": "tides:blocks/sea_grass_double_base"}}],
+    "plant=grass_double1": [{ "textures": { "cross": "tides:blocks/sea_grass_double_top1"}}],
+    "plant=grass_double2": [{ "textures": { "cross": "tides:blocks/sea_grass_double_top2"}}],
+    "plant=grass_double3": [{ "textures": { "cross": "tides:blocks/sea_grass_double_top3"}}],
+    "plant=grass_double4": [{ "textures": { "cross": "tides:blocks/sea_grass_double_top4"}}]
+  }
+}

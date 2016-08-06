@@ -9,7 +9,7 @@
     "inventory": {
       "model": "tides:oyster",
       "textures": { "texture": "tides:models/oyster", "texture1": "tides:models/oyster1"},
-      "y": 90
+      "y": 270
     },
     "facing": {
       "north": { "y": 180 },
@@ -21,12 +21,12 @@
       "empty": {},
       "pearl_white": {
         "submodel": {
-          "black_pearl": { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/oyster_pearl"}}
+          "black_pearl": { "model": "tides:oyster_pearl", "textures": { "texture": "tides:models/pearl"}}
         }
       },
       "pearl_black": {
         "submodel": {
-          "black_pearl": { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/oyster_pearl_black"}}
+          "black_pearl": { "model": "tides:oyster_pearl_black", "textures": { "texture": "tides:models/pearl_black"}}
         }
       },
       "sand": {

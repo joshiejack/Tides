@@ -15,7 +15,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -25,6 +28,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 import static net.minecraft.block.BlockLiquid.LEVEL;
+import static penguins.tides.TClientProxy.NO_WATER;
 import static penguins.tides.lib.TidesInfo.MODID;
 
 public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extends Block {
@@ -89,6 +93,11 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
     }
 
     @Override
+    public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos) {
+        return false;
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
@@ -115,11 +124,18 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
         item.setRegistryName(new ResourceLocation(MODID, name));
         item.setUnlocalizedName(name);
         GameRegistry.register(item);
+
+        if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+            this.registerModels();
+        }
+
         return this;
     }
 
     @SideOnly(Side.CLIENT)
     public void registerModels() {
+        ModelLoader.setCustomStateMapper(this, NO_WATER);
+
         for (E e: values) {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), e.ordinal(), new ModelResourceLocation(getRegistryName(), e.getClass().getSimpleName().toLowerCase() + "=" + e.getName()));
         }

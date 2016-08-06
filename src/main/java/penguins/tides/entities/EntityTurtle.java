@@ -43,7 +43,6 @@ public class EntityTurtle extends EntityAnimal {
         this.tasks.addTask(5, entityaimovetowardsrestriction);
         this.tasks.addTask(7, this.wander);
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-        this.tasks.addTask(8, new EntityAIWatchClosest(this, net.minecraft.entity.monster.EntityGuardian.class, 12.0F, 0.01F));
         this.tasks.addTask(9, new EntityAILookIdle(this));
         this.wander.setMutexBits(3);
         entityaimovetowardsrestriction.setMutexBits(3);

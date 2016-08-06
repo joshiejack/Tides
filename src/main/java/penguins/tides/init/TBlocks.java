@@ -22,6 +22,7 @@ public class TBlocks {
         animal = new BlockAnimal().register("animal");
         coral = new BlockCoral().register("coral");
         rock = new BlockRock().register("rock");
+        plants = new BlockPlants().register("plants");
         GameRegistry.registerTileEntity(TileOyster.class, MODID + ":oyster");
     }
 }
