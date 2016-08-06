@@ -15,8 +15,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -53,6 +55,12 @@ public abstract class BlockTidal<E extends Enum<E> & IStringSerializable> extend
     protected BlockStateContainer createBlockState() {
         if(property == null) return new BlockStateContainer(this, LEVEL, temp);
         return new BlockStateContainer(this, LEVEL, property);
+    }
+
+    @Deprecated
+    @Nullable
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
+        return NULL_AABB;
     }
 
     @Override
