@@ -6,7 +6,7 @@
   },
   "variants": {
     "animal=starfish": [
-      { "model": "tides:starfish1", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
+      { "model": "tides:kelp_floating", "textures": { "texture": "tides:blocks/kelp_floating"}, "weight": 1 },
       { "model": "tides:starfish2", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
       { "model": "tides:starfish3", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },
       { "model": "tides:starfish4", "textures": { "particle": "tides:models/starfish_orange"}, "weight": 1 },

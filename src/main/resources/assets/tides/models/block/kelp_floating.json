@@ -1,0 +1,37 @@
+{
+"textures": {
+    "particle": "blocks/kelp_floating",
+    "texture": "blocks/kelp_floating"
+},
+"elements": [ 
+{
+    "__comment": "Horizontal",
+    "from": [ 8, 8, -3.3125 ],
+    "to": [ 24, 8.0625, 12.6875 ],
+    "rotation": { "origin": [ 8, 8, -3.3125 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "__comment": "Vertical1",
+    "from": [ 2.375, 0, 2.375 ],
+    "to": [ 18.375, 16, 2.4375 ],
+    "rotation": { "origin": [ 2.375, 0, 2.375 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ 13.625, 0, 2.375 ],
+    "to": [ 13.6875, 16, 18.375 ],
+    "rotation": { "origin": [ 13.625, 0, 2.375 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+}
+]
+}
