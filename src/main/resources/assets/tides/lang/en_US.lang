@@ -17,15 +17,9 @@ tile.rock.raw.name=Reef Rock
 tile.plants.kelp_bottom.name=Kelp
 tile.plants.kelp_middle.name=Kelp
 tile.plants.kelp_top.name=Kelp
-tile.plants.grass_1.name=Seagrass
-tile.plants.grass_2.name=Seagrass
-tile.plants.grass_3.name=Seagrass
-tile.plants.grass_4.name=Seagrass
+tile.plants.grass_short.name=Seagrass
 tile.plants.grass_double.name=Seagrass
-tile.plants.grass_double1.name=Seagrass
-tile.plants.grass_double2.name=Seagrass
-tile.plants.grass_double3.name=Seagrass
-tile.plants.grass_double4.name=Seagrass
+tile.plants.grass_top.name=Seagrass
 
 #Items
 item.pearl.white.name=White Pearl
