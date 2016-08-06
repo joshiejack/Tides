@@ -11,7 +11,7 @@ import penguins.tides.blocks.BlockRock.Rock;
 
 public class BlockRock extends BlockTidal<Rock> {
     public enum Rock implements IStringSerializable {
-        REEF;
+        RAW;
 
         @Override
         public String getName() {

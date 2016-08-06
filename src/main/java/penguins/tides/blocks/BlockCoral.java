@@ -9,7 +9,7 @@ import static net.minecraft.block.BlockLiquid.LEVEL;
 
 public class BlockCoral extends BlockTidal<Coral> {
     public enum Coral implements IStringSerializable {
-        BLUE, CYAN, GREEN, ORANGE, PINK;
+        BLUE, CYAN, GREEN, ORANGE, PINK, RED;
 
         @Override
         public String getName() {

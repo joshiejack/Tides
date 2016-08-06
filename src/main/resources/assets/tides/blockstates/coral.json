@@ -9,6 +9,7 @@
     "coral=cyan": [{ "textures": { "cross": "tides:blocks/coral_cyan"}}],
     "coral=green": [{ "textures": { "cross": "tides:blocks/coral_green"}}],
     "coral=orange": [{ "textures": { "cross": "tides:blocks/coral_orange"}}],
-    "coral=pink": [{ "textures": { "cross": "tides:blocks/coral_pink"}}]
+    "coral=pink": [{ "textures": { "cross": "tides:blocks/coral_pink"}}],
+    "coral=red": [{ "textures": { "cross": "tides:blocks/coral_red"}}]
   }
 }
