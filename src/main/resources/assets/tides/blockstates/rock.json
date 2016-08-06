@@ -6,7 +6,11 @@
   },
   "variants": {
     "type": {
-      "raw": { "textures": { "all": "tides:blocks/coralrock" } }
+      "raw": {
+        "textures": {
+          "all": "tides:blocks/coralrock"
+        }
+      }
     }
   }
 }
