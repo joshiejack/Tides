@@ -21,7 +21,7 @@ public class OceanDecorator extends BiomeDecorator {
         net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new net.minecraftforge.event.terraingen.DecorateBiomeEvent.Pre(worldIn, random, chunkPos));
         this.generateOres(worldIn, random);
 
-        for (int l2 = 0; l2 < 8; ++l2) {
+        for (int l2 = 0; l2 < 10; ++l2) {
             int i7 = random.nextInt(16) + 8;
             int l10 = random.nextInt(16) + 8;
             BlockPos blockpos1 = chunkPos.add(i7, 0, l10);

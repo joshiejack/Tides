@@ -11,7 +11,7 @@ import static penguins.tides.blocks.BlockPlants.Plant.*;
 public class BiomeSeagrassMeadow extends BiomeOcean {
     public BiomeSeagrassMeadow(BiomeProperties properties) {
         super(properties);
-        this.spawnableWaterCreatureList.add(new Biome.SpawnListEntry(EntityTurtle.class, 15, 2, 3));
+        this.spawnableWaterCreatureList.add(new Biome.SpawnListEntry(EntityTurtle.class, 30, 2, 3));
         this.topBlock = Blocks.SAND.getDefaultState();
         this.fillerBlock = Blocks.SANDSTONE.getDefaultState();
     }

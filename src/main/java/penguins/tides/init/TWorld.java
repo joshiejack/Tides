@@ -13,7 +13,7 @@ import penguins.tides.world.WorldTypeOcean;
 
 public class TWorld {
     public static final Biome REEF = new BiomeCoralReef((new Biome.BiomeProperties("Coral Reef")).setBaseHeight(-0.5F).setHeightVariation(0.05F).setRainfall(0.5F).setWaterColor(0x279FBA));
-    public static final Biome MEADOW = new BiomeSeagrassMeadow((new Biome.BiomeProperties("Seagrass Meadow")).setBaseHeight(-0.35F).setHeightVariation(0.01F).setRainfall(0.1F).setWaterColor(0x179FD1));
+    public static final Biome MEADOW = new BiomeSeagrassMeadow((new Biome.BiomeProperties("Seagrass Meadow")).setBaseHeight(-0.375F).setHeightVariation(0.005F).setRainfall(0.1F).setWaterColor(0x179FD1));
     public static final Biome FOREST = new BiomeKelpForest((new Biome.BiomeProperties("Kelp Forest")).setBaseHeight(-0.7F).setHeightVariation(0.075F).setRainfall(0.2F).setWaterColor(0x089BBC));
     public static final WorldType OCEANS = new WorldTypeOcean();
 
