@@ -9,17 +9,17 @@
     "plant=kelp_middle": [{ "textures": { "cross": "tides:blocks/kelp_middle"}}],
     "plant=kelp_top": [{ "textures": { "cross": "tides:blocks/kelp_top"}}],
     "plant=grass_short": [
-      { "textures": { "cross": "tides:blocks/sea_grass1"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass2"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass3"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass4"}, "weight": 1 }
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass1"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass2"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass3"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass4"}, "weight": 1 }
     ],
-    "plant=grass_double": [{ "textures": { "cross": "tides:blocks/sea_grass_double_base"}}],
+    "plant=grass_double": [{"model": "crop",  "textures": { "crop": "tides:blocks/sea_grass_double_base"}}],
     "plant=grass_top": [
-      { "textures": { "cross": "tides:blocks/sea_grass_double_top1"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass_double_top2"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass_double_top3"}, "weight": 1 },
-      { "textures": { "cross": "tides:blocks/sea_grass_double_top4"}, "weight": 1 }
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass_double_top1"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass_double_top2"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass_double_top3"}, "weight": 1 },
+      { "model": "crop", "textures": { "crop": "tides:blocks/sea_grass_double_top4"}, "weight": 1 }
     ]
   }
 }
