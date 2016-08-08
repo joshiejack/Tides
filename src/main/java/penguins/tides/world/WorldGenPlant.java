@@ -14,6 +14,7 @@ import java.util.Random;
 public class WorldGenPlant extends WorldGenerator {
     private static final IBlockState SAND = Blocks.SAND.getDefaultState();
     private static final IBlockState SANDSTONE = Blocks.SANDSTONE.getDefaultState();
+    private int frequency = 64;
     private IBlockState top;
     private IBlockState middle;
     private IBlockState bottom;
@@ -33,9 +34,14 @@ public class WorldGenPlant extends WorldGenerator {
         this.bottom = TBlocks.plants.getStateFromEnum(bottom);
     }
 
+    public WorldGenPlant setFrequency(int i) {
+        this.frequency = i;
+        return this;
+    }
+
     @Override
     public boolean generate(World worldIn, Random rand, BlockPos position) {
-        for (int i = 0; i < 64; ++i) {
+        for (int i = 0; i < frequency; ++i) {
             BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), worldIn.getTopSolidOrLiquidBlock(position).getY(), rand.nextInt(8) - rand.nextInt(8));
             if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER && (!worldIn.provider.getHasNoSky() || blockpos.getY() < 255)) {
                 if (top != null) {
@@ -48,19 +54,17 @@ public class WorldGenPlant extends WorldGenerator {
 
                         int j = 1;
                         if (middle != null) {
-                            for (j = 1; j < 16; j++) {
+                            for (j = 1; j < rand.nextInt(16) + 1; j++) {
                                 if (isAcceptablePosition(worldIn, blockpos.up(j), middle)) {
                                     worldIn.setBlockState(blockpos.up(j), middle, 2);
                                 } else break;
                             }
-                        }
 
-                        if (isAcceptablePosition(worldIn, blockpos.up(j), top)) worldIn.setBlockState(blockpos.up(j), top, 2);
+                            worldIn.setBlockState(blockpos.up(j - 1), top, 2);
+                        } else if (isAcceptablePosition(worldIn, blockpos.up(j), top)) worldIn.setBlockState(blockpos.up(j), top, 2);
                     }
                 } else if (bottom != null && isAcceptablePosition(worldIn, blockpos, bottom)) {
                     worldIn.setBlockState(blockpos, bottom, 2);
-                    worldIn.setBlockState(blockpos.down(), SAND, 2);
-                    worldIn.setBlockState(blockpos.down(2), SANDSTONE, 2);
                 }
             }
         }

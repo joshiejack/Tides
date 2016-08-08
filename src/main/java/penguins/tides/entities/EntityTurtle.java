@@ -164,11 +164,6 @@ public class EntityTurtle extends EntityAnimal {
     }
 
     @Override
-    public boolean getCanSpawnHere() {
-        return (this.rand.nextInt(20) == 0 || !this.worldObj.canBlockSeeSky(new BlockPos(this))) && super.getCanSpawnHere();
-    }
-
-    @Override
     public int getVerticalFaceSpeed() {
         return 180;
     }

@@ -9,8 +9,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import penguins.tides.init.TEntities;
 import penguins.tides.init.TBlocks;
+import penguins.tides.init.TEntities;
 import penguins.tides.init.TItems;
 import penguins.tides.init.TWorld;
 
@@ -38,8 +38,8 @@ public class Tides {
     public void preInit(FMLPreInitializationEvent event) {
         TItems.init();
         TBlocks.init();
-        TEntities.init();
         TWorld.init();
+        TEntities.init();
         proxy.initClient();
     }
 }

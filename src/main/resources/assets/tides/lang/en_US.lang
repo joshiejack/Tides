@@ -29,6 +29,7 @@ item.turtle.name=Spawn Turtle
 #Entities
 entity.tides.turtle.name=Green Sea Turtle
 entity.tides.urchin.name=Sea Urchin
+entity.tides.crab.name=Crab
 
 #World
 generator.oceanic=Oceanic

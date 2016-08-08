@@ -25,6 +25,7 @@ public class ItemPearl extends ItemTidal {
     public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
         list.add(getEntity("turtle"));
         list.add(getEntity("urchin"));
+        list.add(getEntity("crab"));
         list.add(new ItemStack(this, 1, 0));
         list.add(new ItemStack(this, 1, 1));
     }

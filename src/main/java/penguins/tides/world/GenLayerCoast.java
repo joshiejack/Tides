@@ -19,7 +19,7 @@ import java.util.List;
 
 public class GenLayerCoast extends GenLayerBiome {
     private List<BiomeEntry> oceans = new ArrayList<BiomeEntry>();
-    private static final Field field= ReflectionHelper.findField(GenLayerBiome.class, "settings", "field_175973_g");
+    private static final Field field = ReflectionHelper.findField(GenLayerBiome.class, "settings", "field_175973_g");
 
     public GenLayerCoast(long seed, GenLayer parent, WorldType type, String options) {
         super(seed, parent, type, options);
@@ -33,7 +33,9 @@ public class GenLayerCoast extends GenLayerBiome {
     public ChunkProviderSettings getSettings() {
         try {
             return (ChunkProviderSettings) field.get(this);
-        } catch (Exception e) { return null; }
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     //Code mostly from genlayer biome
@@ -52,7 +54,8 @@ public class GenLayerCoast extends GenLayerBiome {
                 if (this.getSettings() != null && this.getSettings().fixedBiome >= 0) {
                     aint1[j + i * areaWidth] = this.getSettings().fixedBiome;
                 } else if (isBiomeOceanic(k)) {
-                    if (k != Biome.getIdForBiome(Biomes.DEEP_OCEAN)) aint1[j + i * areaWidth] = Biome.getIdForBiome(getWeightedBiomeEntry().biome);
+                    if (k != Biome.getIdForBiome(Biomes.DEEP_OCEAN))
+                        aint1[j + i * areaWidth] = Biome.getIdForBiome(TWorld.REEF);
                     else aint1[j + i * areaWidth] = k;
                 } else if (k == Biome.getIdForBiome(Biomes.MUSHROOM_ISLAND)) {
                     aint1[j + i * areaWidth] = k;

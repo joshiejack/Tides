@@ -9,9 +9,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import penguins.tides.entities.EntityTurtle;
 import penguins.tides.entities.EntityUrchin;
-import penguins.tides.entities.models.ModelSeaTurtle;
-import penguins.tides.entities.models.ModelSeaUrchin;
-import penguins.tides.entities.models.RenderCreature;
+import penguins.tides.entities.models.*;
 import penguins.tides.init.TItems;
 
 import static net.minecraft.block.BlockLiquid.LEVEL;
@@ -32,6 +30,13 @@ public class TClientProxy extends TCommonProxy {
             @Override
             public Render<? super EntityUrchin> createRenderFor(RenderManager manager) {
                 return new RenderCreature(manager, new ModelSeaUrchin(), "urchin");
+            }
+        });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new IRenderFactory<EntityCrab>() {
+            @Override
+            public Render<? super EntityCrab> createRenderFor(RenderManager manager) {
+                return new RenderCreature(manager, new ModelCrab(), "crab");
             }
         });
 
